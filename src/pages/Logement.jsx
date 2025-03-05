@@ -11,8 +11,9 @@ function Logement() {
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
             <p>{logement.tags}</p>
-
-            <p>{logement.description}</p>
+            {/* Component "rating" */}
+            {/* Component "slider" description */}
+            {/* Component "slider" équipements */}
         </div>
     );
 }

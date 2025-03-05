@@ -1,10 +1,13 @@
 import logoFooter from '../assets/images/logoKasaFooter.png';
+import getDate from './Date';
 
 function Footer() {
+    let date = getDate();
+
     return (
         <footer className="footer">
             <img src={logoFooter} alt="Kasa Logo" className="logo" />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <p className='logo__text'>© {date} Kasa. All rights reserved</p>
         </footer>
     );
 }
