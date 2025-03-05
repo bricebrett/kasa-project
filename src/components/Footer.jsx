@@ -1,8 +1,8 @@
 import logoFooter from '../assets/images/logoKasaFooter.png';
-import getDate from './Date';
+import GetDate from './Date';
 
 function Footer() {
-    let date = getDate();
+    let date = GetDate();
 
     return (
         <footer className="footer">

@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as vars;
 
 .grid {
     display: grid;
@@ -5,7 +6,7 @@
     justify-content: center;
     align-items: start;
     gap: 40px;
-    background-color: $background-color;
+    background-color: vars.$background-color;
     padding: 40px;
     border-radius: 25px;
     margin: 50px 0;

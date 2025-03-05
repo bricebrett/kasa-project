@@ -1,14 +1,15 @@
-@import "./abstracts/mixins";
-@import "./abstracts/variables";
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
 
-@import "./base/reset";
+@use "./base/reset";
 
-@import "./components/banner";
-@import "./components/card";
-@import "./components/collapse";
-@import "./components/footer";
-@import "./components/header";
-@import "./components/rating";
-@import "./components/slider";
+@use "./components/banner";
+@use "./components/card";
+@use "./components/collapse";
+@use "./components/dropdown";
+@use "./components/footer";
+@use "./components/header";
+@use "./components/rating";
+@use "./components/slider";
 
-@import "./layout/layout";
+@use "./layout/layout";

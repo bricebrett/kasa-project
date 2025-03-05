@@ -1,17 +1,20 @@
+@use '../abstracts/variables' as vars;
+
 body {
-    font-family: $font-main;
+    font-family: vars.$font-main;
     margin: 0;
     padding: 0;
 }
 
 .page-container {
     min-height: 100vh;
-    // width: 1240px;
+    width: 1240px;
     margin: 0 auto;
 }
 
 .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

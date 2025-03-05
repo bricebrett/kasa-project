@@ -1,6 +1,8 @@
+@use "../abstracts/variables" as vars;
+
 .footer {
     background: #000;
-    color: $secondary-color;
+    color: vars.$secondary-color;
     text-align: center;
     padding: 20px;
     font-size: 14px;
