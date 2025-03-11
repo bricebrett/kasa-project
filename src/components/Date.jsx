@@ -1,5 +1,5 @@
-function GetDate () {
+function GetDate() {
   return new Date().getFullYear();
-};
+}
 
 export default GetDate;

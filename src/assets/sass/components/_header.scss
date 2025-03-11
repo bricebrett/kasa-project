@@ -1,24 +1,24 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  margin-bottom: 10px;
+  .logo {
+    width: 210px;
+    height: 68px;
+  }
+  .nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
-    margin-bottom: 10px;
-    .logo {
-        width: 210px;
-        height: 68px;
+    gap: 60px;
+    .nav__text {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+      &.active {
+        text-decoration: underline;
+        color: black;
+      }
     }
-    .nav {
-        display: flex;
-        gap: 60px;
-        .nav__text {
-            text-decoration: none;
-            color: black;
-            font-size: 24px;
-            &.active {
-                text-decoration: underline;
-                color: black;
-            }
-        }
-    }
+  }
 }

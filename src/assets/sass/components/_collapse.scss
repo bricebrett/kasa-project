@@ -1,65 +1,66 @@
 @use "../abstracts/variables" as vars;
 
 .collapse {
+  width: 1023px;
+  min-height: 54px;
+  margin-top: 40px;
+
+  .collapse__button {
+    border: none;
+    background-color: vars.$primary-color;
+    color: vars.$secondary-color;
     width: 1023px;
-    min-height: 54px;
-    margin-top: 40px;
+    height: 54px;
+    border-radius: 5px;
+    cursor: pointer;
 
-    .collapse__button {
-        border: none;
-        background-color: vars.$primary-color;
-        color: vars.$secondary-color;
-        width: 1023px;
-        height: 54px;
-        border-radius: 5px;
-        cursor: pointer;
-
-        .collapse__content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px;
-        }
-
-        .collapse__button-text {
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .collapse__button-icon {
-            font-size: 24px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .rotate {
-            transform: rotate(-180deg);
-        }
+    .collapse__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
     }
 
-    .collapse__description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1023px;
-        border-radius: 5px;
-        padding: 0 20px;
-        margin: 0;
-        background-color: vars.$background-color;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-
-        .collapse__description-text {
-            width: 1023px;
-            margin: 0;
-            font-size: 16px;
-            color: black;
-        }
+    .collapse__button-text {
+      font-size: 24px;
+      font-weight: 700;
     }
 
-    .collapse__description.open {
-        max-height: 200px;
-        opacity: 1;
-        padding: 20px;
+    .collapse__button-icon {
+      font-size: 24px;
+      transition: transform 0.3s ease-in-out;
     }
+
+    .rotate {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .collapse__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1023px;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin: 0;
+    background-color: vars.$background-color;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+
+    .collapse__description-text {
+      width: 1023px;
+      margin: 0;
+      font-size: 16px;
+      color: black;
+    }
+  }
+
+  .collapse__description.open {
+    max-height: 200px;
+    opacity: 1;
+    padding: 20px;
+  }
 }
