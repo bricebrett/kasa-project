@@ -1,4 +1,4 @@
-import logements from '../data/logement.json';
+import houses from '../data/house.json';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 
@@ -7,8 +7,8 @@ function Home() {
         <div>
             <Banner />
             <div className="grid">
-                {logements.map((logement) => (
-                    <Card key={logement.id} {...logement} />
+                {houses.map((house) => (
+                    <Card key={house.id} {...house} />
                 ))}
             </div>
         </div>

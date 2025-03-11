@@ -1,11 +1,11 @@
 import Banner from '../components/Banner';
-import Dropdown from '../components/Dropdown';
+import Collapse from '../components/Collapse';
 
 function About () {
     return (
         <>
         <Banner />
-        <Dropdown />
+        <Collapse />
         </>
     )
 }

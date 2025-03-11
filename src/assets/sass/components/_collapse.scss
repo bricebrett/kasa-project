@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as vars;
+
+.collapse {
+    width: 1023px;
+    height: 54px;
+    margin-top: 40px;
+    .collapse__button {
+        border: none;
+        background-color: vars.$primary-color;
+        color: vars.$secondary-color;
+        width: 1023px;
+        height: 54px;
+        border-radius: 5px;
+        .collapse__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        .collapse__button-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .collapse__button-icon {
+            font-size: 24px;
+        }
+    }
+    .collapse__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1023px;
+        border-radius: 5px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: vars.$background-color;
+        padding: 20px;
+        .collapse__list-item {
+            width: 1023px;
+            padding: 10px;
+            font-size: 18px;
+            color: vars.$secondary-color;
+        }
+    }
+}
