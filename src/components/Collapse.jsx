@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-function Collapse ({ title, description }) {
+function Collapse({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleCollapse = () => {
@@ -14,14 +14,14 @@ function Collapse ({ title, description }) {
             <button className="collapse__button" onClick={handleCollapse}>
                 <div className="collapse__content">
                     <span className="collapse__button-text">{title}</span>
-                    <span className="collapse__button-icon">{isOpen ? <FaChevronDown /> : <FaChevronUp />}</span>
+                    <span className={`collapse__button-icon ${isOpen ? "rotate" : ""}`}>
+                        <FaChevronUp />
+                    </span>
                 </div>
             </button>
-            {isOpen && (
-                <ul className="collapse__list">
-                    <li className="collapse__item">{description}</li>
-                </ul>
-            )}
+            <div className={`collapse__description ${isOpen ? "open" : ""}`}>
+                <p className="collapse__description-text">{description}</p>
+            </div>
         </div>
     );
 }

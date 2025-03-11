@@ -2,8 +2,9 @@
 
 .collapse {
     width: 1023px;
-    height: 54px;
+    min-height: 54px;
     margin-top: 40px;
+
     .collapse__button {
         border: none;
         background-color: vars.$primary-color;
@@ -11,36 +12,54 @@
         width: 1023px;
         height: 54px;
         border-radius: 5px;
+        cursor: pointer;
+
         .collapse__content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 5px;
         }
+
         .collapse__button-text {
             font-size: 24px;
             font-weight: 700;
         }
+
         .collapse__button-icon {
             font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rotate {
+            transform: rotate(-180deg);
         }
     }
-    .collapse__list {
+
+    .collapse__description {
         display: flex;
         justify-content: center;
         align-items: center;
         max-width: 1023px;
         border-radius: 5px;
-        list-style-type: none;
-        padding: 0;
+        padding: 0 20px;
         margin: 0;
         background-color: vars.$background-color;
-        padding: 20px;
-        .collapse__list-item {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+        .collapse__description-text {
             width: 1023px;
-            padding: 10px;
-            font-size: 18px;
-            color: vars.$secondary-color;
+            margin: 0;
+            font-size: 16px;
+            color: black;
         }
+    }
+
+    .collapse__description.open {
+        max-height: 200px;
+        opacity: 1;
+        padding: 20px;
     }
 }
