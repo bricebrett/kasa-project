@@ -1,7 +1,7 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Card ({id, title, cover}) {
+function Card ({ id, title, cover }) {
     return (
         <Link to={`/house/${id}`} className="card">
                 <img src={cover} alt={title} className="card__image" />
@@ -11,9 +11,9 @@ function Card ({id, title, cover}) {
 }
 
 Card.propTypes = {
-    id: propTypes.string.isRequired,
-    title: propTypes.string.isRequired,
-    cover: propTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
 };
 
 export default Card;
