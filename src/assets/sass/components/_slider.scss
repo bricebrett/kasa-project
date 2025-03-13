@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    display: block;
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+
+  .slider__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+  }
+
+  .slider__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
