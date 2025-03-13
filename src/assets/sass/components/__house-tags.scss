@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as vars;
+
+.house__tags {
+  margin-top: 30px;
+  .house__tags-content {
+    color: vars.$secondary-color;
+    padding: 10px 30px;
+    background-color: vars.$primary-color;
+    margin-right: 10px;
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

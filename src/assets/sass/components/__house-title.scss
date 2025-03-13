@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as vars;
+
+.house__title {
+  .house__title-content {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    letter-spacing: 0%;
+    color: vars.$primary-color;
+    margin: 0;
+  }
+  .house__title-location {
+    margin: 0;
+  }
+}

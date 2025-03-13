@@ -1,5 +1,7 @@
 import { Navigate, useParams } from "react-router-dom";
 import Slider from "../components/Slider";
+import HouseTitle from "../components/HouseTitle";
+import HouseTags from "../components/HouseTags";
 import houses from "../data/house.json";
 
 function House() {
@@ -13,9 +15,8 @@ function House() {
   return (
     <div className="house">
       <Slider pictures={house.pictures} />
-      <h1>{house.title}</h1>
-      <p>{house.location}</p>
-      <p>{house.tags}</p>
+      <HouseTitle title={house.title} location={house.location} />
+      <HouseTags tags={house.tags} />
       {/* Component "rating" */}
       {/* Component "slider" description */}
       {/* Component "slider" équipements */}
