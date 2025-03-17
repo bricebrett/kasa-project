@@ -33,13 +33,13 @@ function Slider({ pictures }) {
     <div className="slider">
       {pictures.length > 1 && (
         <div className="slider__btn slider__btn--prev" onClick={prevSlide}>
-          <FaChevronLeft size={30} />
+          <FaChevronLeft size={70} />
         </div>
       )}
       <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
       {pictures.length > 1 && (
         <div className="slider__btn slider__btn--next" onClick={nextSlide}>
-          <FaChevronRight size={30} />
+          <FaChevronRight size={70} />
         </div>
       )}
       <div className="slider__pagination">

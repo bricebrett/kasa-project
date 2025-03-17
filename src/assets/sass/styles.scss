@@ -3,8 +3,9 @@
 
 @use "./base/reset";
 
-@use "./components/_house-tags";
+@use "./components/house-tags";
 @use "./components/_house-title";
+@use "./components/house-host";
 @use "./components/banner";
 @use "./components/card";
 @use "./components/collapse";

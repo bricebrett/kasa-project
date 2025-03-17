@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaChevronUp } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-function Collapse({ title, description }) {
+function Collapse({ title, description, className }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCollapse = () => {
@@ -10,7 +10,7 @@ function Collapse({ title, description }) {
   };
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${className || ""}`}>
       <button className="collapse__button" onClick={handleCollapse}>
         <div className="collapse__content">
           <span className="collapse__button-text">{title}</span>
@@ -20,7 +20,17 @@ function Collapse({ title, description }) {
         </div>
       </button>
       <div className={`collapse__description ${isOpen ? "open" : ""}`}>
-        <p className="collapse__description-text">{description}</p>
+        {Array.isArray(description) ? (
+          <ul className="collapse__list">
+            {description.map((item, index) => (
+              <li key={index} className="collapse__list-item">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="collapse__description-text">{description}</p>
+        )}
       </div>
     </div>
   );
@@ -29,6 +39,7 @@ function Collapse({ title, description }) {
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default Collapse;

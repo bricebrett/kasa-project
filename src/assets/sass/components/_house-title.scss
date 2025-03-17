@@ -2,12 +2,11 @@
 
 .house__title {
   .house__title-content {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 143%;
-    letter-spacing: 0%;
+    font-size: 30px;
     color: vars.$primary-color;
     margin: 0;
+    padding-bottom: 5px;
+    padding-top: 20px;
   }
   .house__title-location {
     margin: 0;

@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import collapseData from "../data/collapseDate.json";
+import collapseData from "../data/collapseData.json";
 
 function About() {
   return (
@@ -8,7 +8,12 @@ function About() {
       <Banner />
       <div className="about">
         {collapseData.map(({ id, title, description }) => (
-          <Collapse key={id} title={title} description={description} />
+          <Collapse
+            key={id}
+            className="about-collapse"
+            title={title}
+            description={description}
+          />
         ))}
       </div>
     </>

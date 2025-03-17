@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as vars;
+
+.house__host {
+  display: flex;
+  align-items: center;
+  .house__host-name {
+    text-align: end;
+    white-space: pre-line;
+    font-size: 18px;
+    color: vars.$primary-color;
+    white-space: pre-wrap;
+    line-height: 1.2;
+    width: 50%;
+  }
+  .house__host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+}

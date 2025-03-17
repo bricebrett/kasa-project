@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as vars;
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star-icon {
+  font-size: 24px;
+  color: #e3e3e3;
+}
+
+.star-icon.filled {
+  color: vars.$primary-color;
+}
