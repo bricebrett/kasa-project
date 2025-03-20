@@ -1,14 +1,28 @@
 @use "../abstracts/variables" as vars;
 
 .house__tags {
+  display: flex;
+  gap: 10px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .house__tags-content {
+    padding: 4px 5px;
+    height: 25px;
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     color: vars.$secondary-color;
-    padding: 10px 30px;
     background-color: vars.$primary-color;
-    margin-right: 10px;
-    border-radius: 20px;
-
+    border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+      width: 84px;
+      height: 18px;
+    }
   }
 }

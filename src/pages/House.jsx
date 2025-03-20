@@ -16,15 +16,17 @@ function House() {
   }
 
   return (
-    <div className="house">
+    <>
       <Slider pictures={house.pictures} />
-      <div className="first-line">
-        <HouseTitle title={house.title} location={house.location} />
-        <HouseHost host={house.host} />
-      </div>
-      <div className="second-line">
-        <HouseTags tags={house.tags} />
-        <Rating rating={house.rating} />
+      <div className="title-and-host">
+        <div className="title-and-host__title">
+          <HouseTitle title={house.title} location={house.location} />
+          <HouseTags tags={house.tags} />
+        </div>
+        <div className="title-and-host__host">
+          <HouseHost host={house.host} />
+          <Rating rating={house.rating} />
+        </div>
       </div>
       <div className="third-line">
         <Collapse
@@ -38,7 +40,7 @@ function House() {
           description={house.equipments}
         />
       </div>
-    </div>
+    </>
   );
 }
 
