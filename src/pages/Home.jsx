@@ -4,14 +4,14 @@ import Card from "../components/Card";
 
 function Home() {
   return (
-    <div>
+    <>
       <Banner />
-      <div className="grid">
+      <div className="cards">
         {houses.map((house) => (
           <Card key={house.id} {...house} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

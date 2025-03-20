@@ -1,9 +1,14 @@
 @use "../abstracts/variables" as vars;
 
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
 .collapse {
   max-width: 1023px;
   min-height: 54px;
-  margin-top: 40px;
 
   .collapse__button {
     border: none;
@@ -24,6 +29,9 @@
     .collapse__button-text {
       font-size: 24px;
       font-weight: 700;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     .collapse__button-icon {
@@ -38,7 +46,6 @@
 
   .collapse__description {
     display: flex;
-    // justify-content: center;
     align-items: center;
     max-width: 1023px;
     border-radius: 5px;

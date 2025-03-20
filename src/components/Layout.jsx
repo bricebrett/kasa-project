@@ -4,15 +4,13 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-    <div className="layout">
-      <div className="page-container">
-        <Header />
-        <main className="content">
-          <Outlet />
-        </main>
-      </div>
+    <>
+      <Header />
+      <main className="content">
+        <Outlet />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
