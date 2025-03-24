@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function HouseHost({ host }) {
   return (
     <div className="house__host">
@@ -10,5 +12,12 @@ function HouseHost({ host }) {
     </div>
   );
 }
+
+HouseHost.propTypes = {
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default HouseHost;

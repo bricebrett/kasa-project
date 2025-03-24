@@ -7,8 +7,8 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <Link>
-        <img src={logoFooter} alt="Kasa Logo" className="logo" to="/" />
+      <Link to="/">
+        <img src={logoFooter} alt="Kasa Logo" className="logo" />
       </Link>
       <p className="logo__text">© {date} Kasa. All rights reserved</p>
     </footer>
