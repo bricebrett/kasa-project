@@ -9,6 +9,9 @@
 .collapse {
   max-width: 1023px;
   min-height: 54px;
+  @media (max-width: 768px) {
+    min-height: 30px;
+  }
 
   .collapse__button {
     border: none;
@@ -18,12 +21,15 @@
     height: 54px;
     border-radius: 5px;
     cursor: pointer;
+    @media (max-width: 768px) {
+      height: 30px;
+    }
 
     .collapse__content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 5px;
+      text-align: center;
     }
 
     .collapse__button-text {
@@ -37,6 +43,9 @@
     .collapse__button-icon {
       font-size: 24px;
       transition: transform 0.3s ease-in-out;
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     .rotate {
@@ -70,7 +79,7 @@
   }
 
   .collapse__description.open {
-    max-height: 500px;
+    max-height: 200px;
     opacity: 1;
     padding: 20px;
   }
@@ -80,7 +89,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 
 .collapse__list {
