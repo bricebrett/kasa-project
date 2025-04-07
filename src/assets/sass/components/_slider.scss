@@ -43,5 +43,8 @@
     color: white;
     padding: 5px 10px;
     font-size: 14px;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }

@@ -10,7 +10,6 @@ function Home() {
     <>
       {/* Main banner displayed on the home page */}
       <Banner />
-
       {/* Container for all house cards */}
       <div className="cards">
         {houses.map((house) => (

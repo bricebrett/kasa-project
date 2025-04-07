@@ -1,12 +1,11 @@
-import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-import bannerImage from "../assets/images/bannerKasa.png";
-import aboutBannerImage from "../assets/images/aboutBannerKasa.png";
+import defaultImage from "../assets/images/bannerKasa.png";
+import aboutImage from "../assets/images/aboutBannerKasa.png";
 
 /**
  * BANNER COMPONENT
  */
-function Banner({ defaultImage, aboutImage }) {
+function Banner() {
   const location = useLocation();
 
   // Determine if the current page is the "About" page
@@ -16,11 +15,7 @@ function Banner({ defaultImage, aboutImage }) {
     <div className="banner">
       {/* Dynamically select the correct banner image based on the route */}
       <img
-        src={
-          isAboutPage
-            ? aboutImage || aboutBannerImage
-            : defaultImage || bannerImage
-        }
+        src={isAboutPage ? aboutImage : defaultImage}
         alt="Kasa Banner"
         className="banner__image"
       />
@@ -32,10 +27,5 @@ function Banner({ defaultImage, aboutImage }) {
     </div>
   );
 }
-
-Banner.propTypes = {
-  defaultImage: PropTypes.string,
-  aboutImage: PropTypes.string,
-};
 
 export default Banner;

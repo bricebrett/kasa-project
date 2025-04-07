@@ -1,9 +1,9 @@
 import { Navigate, useParams } from "react-router-dom";
-import Slider from "../components/Slider";
-import HouseTitle from "../components/HouseTitle";
-import HouseTags from "../components/HouseTags";
-import HouseHost from "../components/HouseHost";
-import Rating from "../components/Rating";
+import Slider from "../components/house/Slider";
+import HouseTitle from "../components/house/HouseTitle";
+import HouseTags from "../components/house/HouseTags";
+import HouseHost from "../components/house/HouseHost";
+import Rating from "../components/house/Rating";
 import Collapse from "../components/Collapse";
 import houses from "../data/house.json";
 
